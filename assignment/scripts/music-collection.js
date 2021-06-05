@@ -12,8 +12,8 @@ addToCollection('I Hate Everything About You', 'Three Days Grace', 2007)
 addToCollection('I Hate Everything About You', 'Longshot', 2019)
 addToCollection('Numb', 'Linkin Park', 2003)
 addToCollection('Numb', 'Aaron Richards, Mr FijiWiji', 2020)
-addToCollection('Oh Raven', 'Unlike pluto', 2019)
-addToCollection('Yes Offense', 'Unlike pluto', 2019)
+addToCollection('Oh Raven', 'Unlike Pluto', 2019)
+addToCollection('Yes Offense', 'Unlike Pluto', 2019)
 
 console.log('This is my collection:', collection);
 
@@ -26,4 +26,18 @@ function showCollection(collection) {
 }
 console.log(showCollection(collection));
 
-`TITLE by ARTIST, published in YEAR`
+function findByArtist(artist) {
+  console.log('Searching inventory');
+  let searchResults = []
+    for (let i =0; i < collection.length; i++){
+      if (collection[i].artist === artist) searchResults.push([collection[i].title, collection[i].artist,  collection[i].yearPublished])
+    }
+ return console.log(searchResults);
+}
+
+console.log(findByArtist('Unlike Pluto'));
+console.log(findByArtist('Linkin Park'));
+console.log(findByArtist('not here'));
+
+addToCollection('Riot', 'Three Days Grace', 2007)
+console.log(findByArtist('Three Days Grace'));
