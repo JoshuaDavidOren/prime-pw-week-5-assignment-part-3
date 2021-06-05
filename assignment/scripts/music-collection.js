@@ -3,8 +3,10 @@ console.log('***** Music Collection *****')
 const collection = []
 
 function addToCollection(title, artist, yearPublished) {
-  this.title = title;
-  this.artist = artist;
-  this.yearPublished = yearPublished;
-  return console.log('My stock', collection);
+  collection.push({title, artist, yearPublished}); {
+    return console.log('New record:',({title, artist, yearPublished}));
+  }
 }
+
+addToCollection('my', 'first', 1990)
+addToCollection('my2', 'first2', 19902)
